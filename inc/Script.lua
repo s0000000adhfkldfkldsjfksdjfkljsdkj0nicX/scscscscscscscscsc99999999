@@ -3772,8 +3772,8 @@ local texs = [[
 keyboard = {} 
 keyboard.inline_keyboard = {
 	{
-{text = 'CHANEL SOURCE', url=callback_data=msg.sender_user_id_.."t.me/sourcehill"},
-{text = 'DEV', url=callback_data=msg.sender_user_id_.."t.me/xb_0b"},
+{text = 'CHANEL SOURCE', url=msg.sender_user_id_.."t.me/sourcehill"},
+{text = 'DEV', url=msg.sender_user_id_.."t.me/xb_0b"},
 },
 }
 local msg_id = msg.id_/2097152/0.5
