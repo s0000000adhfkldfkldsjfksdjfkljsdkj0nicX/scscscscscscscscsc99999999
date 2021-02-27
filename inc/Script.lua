@@ -3763,8 +3763,8 @@ end
 
 
 
-if MsgText[1] == "سورس" then
-local texs = [[ 
+if MsgText[1] == "السورس" or MsgText[1]=="سورس" then
+return [[
 *• اوامر المجموعه*
  ━━━━━━━━
 • م1 => اوامر الادمنيه
