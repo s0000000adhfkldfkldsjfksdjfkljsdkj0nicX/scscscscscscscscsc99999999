@@ -182,7 +182,7 @@ uuuu = arg.UserName:gsub("@","")
 sendMsg(arg.ChatID,arg.MsgID,"["..data.title_.."](t.me/"..uuuu..")")
 end,{ChatID=msg.chat_id_,MsgID=msg.id_,UserName=info.username})
 else
-message = message..' ['..info.username..'](t.me/wizard_system)  \n'
+message = message..' ['..info.username..'](T.ME/SourceHell)  \n'
 sendMsg(msg.chat_id_,msg.id_,message)
 end
 
@@ -3070,7 +3070,7 @@ end
 
 if (MsgText[1] == 'تحديث السورس' or MsgText[1] == 'تحديث السورس ™') then
 if not msg.SudoBase then return "⌯ هذا الامر يخص {المطور الاساسي} فقط  \n" end
-local GetVerison = https.request('https://raw.githubusercontent.com/r00t94/r00t94.github.io/main/GetVersion.txt') or "0"
+local GetVerison = https.request('https://raw.githubusercontent.com/iamabazawhourhhhhhh/iamabazawhourhhhhhh.github.io/main/GetVersion.txt') or "0"
 GetVerison = GetVerison:gsub("\n",""):gsub(" ","")
 if GetVerison > version then
 UpdateSourceStart = true
@@ -3137,8 +3137,8 @@ end
 if (MsgText[1]== "ايدي" or MsgText[1]=="ايدي 🆔") and msg.type == "pv" then return  "\n"..msg.sender_user_id_.."\n"  end
 
 if MsgText[1]== "قناة السورس ✮" and msg.type == "pv" then
-local inline = {{{text="Source Channel : Wizard",url="t.me/wizard_system"}}}
-send_key(msg.sender_user_id_,'  [Source : WS](t.me/wizard_system)',nil,inline,msg.id_)
+local inline = {{{text="Source Channel : Wizard",url="T.ME/SourceHell"}}}
+send_key(msg.sender_user_id_,'  [Source : WS](T.ME/SourceHell)',nil,inline,msg.id_)
 return false
 end
 
@@ -3765,21 +3765,13 @@ end
 
 if MsgText[1] == "سورس" or MsgText[1]=="السورس" then
 return [[
-🧙‍♂┋Wizard System𓅆
-⌯ ⌯ ⌯ ⌯ ⌯ ⌯ ⌯ ⌯ ⌯ ⌯ 
-👾 - [CH](https://t.me/Wizard_System)
-👨‍💻 - [Dev](https://t.me/r00t94)
-👨‍💻 - [Dev](https://t.me/lIIUlI)
-👨‍💻 - [Dev](https://t.me/J_69_L)
-⌯ ⌯ ⌯ ⌯ ⌯ ⌯ ⌯ ⌯ ⌯ ⌯ 
-💬 - [For Contact](https://t.me/WiZArdSoUrCeBot)
-
+edit me ya donkey
 ]]
 end
 
 if MsgText[1] == "متجر الملفات" or MsgText[1]:lower() == "/store"  then
 if not msg.SudoBase then return "⌯ هذا الامر يخص {المطور الاساسي} فقط  \n" end
-local Get_Files, res = https.request("https://r00t94.github.io/GetFiles.json")
+local Get_Files, res = https.request("https://raw.githubusercontent.com/iamabazawhourhhhhhh/iamabazawhourhhhhhh.github.io/main/GetFiles.json")
 print(Get_Files)
 print(res)
 if res == 200 then
@@ -3819,7 +3811,7 @@ TText = "✮ الملف موجود بالفعل \n⚶ تم تحديث الملف
 else
 TText = "⚶ تم تثبيت وتفعيل الملف بنجاح \n✓"
 end
-local Get_Files, res = https.request("https://raw.githubusercontent.com/r00t94/ws/main/plugins/"..FileName)
+local Get_Files, res = https.request("https://raw.githubusercontent.com/iamabazawhourhhhhhh/iamabazawhourhhhhhh.github.io/main/plugins/"..FileName)
 if res == 200 then
 print("DONLOADING_FROM_URL: "..FileName)
 local FileD = io.open("plugins/"..FileName,'w+')
@@ -3952,7 +3944,7 @@ end
 
 text = [[⌯ مـرحبآ آنآ بوت آسـمـي []]..redis:get(ws..':NameBot:')..[[] 
 ⌯ يمكنني حمايه المجموعات من السبام والتوجيه الخ....
-⌯ [قـناة الـسورس](HTTPS://T.ME/WIZARD_SYSTEM) 
+⌯ [قـناة الـسورس](HTTPS://T.ME/SourceHell) 
 ]]..SUDO_USERR..[[
 
 ⌯]]
@@ -6128,7 +6120,6 @@ elseif Text== "سلام" or Text== "السلام عليكم" or Text== "سلام
 return sendMsg(msg.chat_id_,msg.id_,"وعليكم السلام .✮" )
 
 elseif Text== "ufO" or Text== "Ufo" or Text== "uFo" or Text== "ufo" or Text== "UFO" then return sendMsg(msg.chat_id_,msg.id_,"[UFO](HTTPS://T.ME/lIIUlI)")
-elseif Text== "ايكاريوس"  then return sendMsg(msg.chat_id_,msg.id_,"[ايـَكَـاريُـوس](https://t.me/ARMY7_7)")
 elseif Text== "هيل" or Text== "hell" or Text== "Hell" or Text== "HELL" or Text== "مطور السورس" then return sendMsg(msg.chat_id_,msg.id_,"[STORM SYSTEM](HTTPS://T.ME/R00T94)")
 elseif Text== "ايديي" or Text=="ايدي 🆔" then 
 GetUserID(msg.sender_user_id_,function(arg,data)
