@@ -3783,7 +3783,7 @@ keyboard.inline_keyboard = {
 {text = '⓵', callback_data=msg.sender_user_id_.."/help1"},{text = '⓶', callback_data=msg.sender_user_id_.."/help2"},{text = '⓷', callback_data=msg.sender_user_id_.."/help3"},
 },
 {
-{text = '⓸', callback_data=msg.sender_user_id_,.."/help4"},
+{text = '⓸', callback_data=msg.sender_user_id_.."/help4"},
 },
 {
 {text = 'اوامر التعطيل', callback_data=msg.sender_user_id_.."/homeaddrem"},{text = 'اوامر القفل', callback_data=msg.sender_user_id_.."/homelocks"},
