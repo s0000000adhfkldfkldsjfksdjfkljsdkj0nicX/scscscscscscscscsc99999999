@@ -3764,14 +3764,14 @@ end
 
 
 if MsgText[1] == "السورس" or MsgText[1]=="سورس" then
-local text = "⌯ اهلاً بك في المجموعة\n⌯ للتأكد بأنك لست { ربوت }\n⌯ تم تقييدك اضغط الزر بالاسفل\n⌯ للتأكد انك { عضو حقيقي }🌻👇🏾"
-local inline = {{{text="• أضـغط ۿـنا للتـأكد أنك لست ربوت ♻️",callback_data="CheckRobotJoin:"..Senderid}}}
-Restrict(msg.chat_id_,Senderid,1)
-return send_inline(msg.chat_id_,text,inline,msg.id_)
-end
-end
-end
-if ISONEBOT then return false end
+return [[
+ ✘  [ 𝒃𝒊𝒕𝒂 𝒄𝒉𝒂𝒏𝒆𝒍   ⁦](t.me/baselabaza)
+෴෴෴෴෴
+ ✘  [𝒅𝒆𝒗](t.me/xb_0b)
+෴෴෴෴෴
+ ✘ [ 𝒕𝒘𝒂𝒔𝒐𝒍 ](t.me/abazaxbot)
+෴෴෴෴෴
+]]
 end
 
 if MsgText[1] == "متجر الملفات" or MsgText[1]:lower() == "/store"  then
