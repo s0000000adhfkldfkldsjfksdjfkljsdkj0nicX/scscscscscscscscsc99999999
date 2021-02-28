@@ -486,10 +486,10 @@ Name = data.first_name_ .." "..data.last_name_
 else 
 Name = data.first_name_ 
 end
-usernn = data.username_ or "Wizard_System"
+usernn = data.username_ or "sourcehell"
 else 
 Name = data.title_
-usernn = data.type_.user_.username_ or "Wizard_System"
+usernn = data.type_.user_.username_ or "sourcehell"
 end
 Name = Name:gsub('[[][]]','')
 Name = FlterName(Name,10)
