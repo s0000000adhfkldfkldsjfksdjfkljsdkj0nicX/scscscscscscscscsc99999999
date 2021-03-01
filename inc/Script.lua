@@ -6123,7 +6123,7 @@ return sendMsg(msg.chat_id_,msg.id_,"واحشني")
 elseif Text== "مرحبا"  then return sendMsg(msg.chat_id_,msg.id_,"مراحب")
 elseif Text== "سلام" or Text== "السلام عليكم" or Text== "سلام عليكم" or Text=="سلامن عليكم" or Text=="السلامن عليكم" then 
 return sendMsg(msg.chat_id_,msg.id_,"وعليكم السلام ." )
-elseif Text== "hell" or Text== "هيل" or Text== "مطور السورس" then return sendMsg(msg.chat_id_,msg.id_,"[مطور السورس](https://t.me/r00t94)")
+elseif Text== "hell" or Text== "هيل" or Text== "مطور السورس" then return sendMsg(msg.chat_id_,msg.id_,"[hell.](https://t.me/r00t94)")
 elseif Text== "بوب" or Text== "البوب"  then return sendMsg(msg.chat_id_,msg.id_,"[bob](HTTPS://T.ME/UU_0b)")
 elseif Text== "باسل" or Text== "بيسو" or Text== "بسله" then return sendMsg(msg.chat_id_,msg.id_,"[مطور السورس👑](T.ME/xb_0b)")
 elseif Text== "ايديي" or Text=="ايدي 🆔" then 
