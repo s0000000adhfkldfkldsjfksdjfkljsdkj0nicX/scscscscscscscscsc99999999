@@ -380,8 +380,8 @@ Del_msg(msg.chat_id_,msg.id_)
 return false 
 else
 if redis:get(ws.."lock_check"..msg.chat_id_) and not redis:get(ws..":TqeedUser:"..msg.chat_id_..Senderid) then
-local text = "⌯ اهلاً بك في المجموعة\n⌯ للتأكد بأنك لست { ربوت }\n⌯ تم تقييدك اضغط الزر بالاسفل\n⌯ للتأكد انك { عضو حقيقي }🌻👇🏾"
-local inline = {{{text="• أضـغط ۿـنا للتـأكد أنك لست ربوت ♻️",callback_data="CheckRobotJoin:"..Senderid}}}
+local text = "⌯ اهلاً بك في المجموعة\n⌯ للتأكد بأنك لست { ربوت }\n⌯ تم تقييدك اضغط الزر بالاسفل\n⌯ للتأكد انك { عضو حقيقي }"
+local inline = {{{text="• أضـغط ۿـنا للتـأكد أنك لست ربوت ",callback_data="CheckRobotJoin:"..Senderid}}}
 Restrict(msg.chat_id_,Senderid,1)
 return send_inline(msg.chat_id_,text,inline,msg.id_)
 end
