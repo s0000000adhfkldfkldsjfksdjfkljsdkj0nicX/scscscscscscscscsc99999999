@@ -3823,7 +3823,7 @@ TText = " الملف موجود بالفعل \nঌ تم تحديث الملف  \
 else
 TText = "ঌ تم تثبيت وتفعيل الملف بنجاح \n"
 end
-local Get_Files, res = https.request("https://raw.githubusercontent.com/iamabazawhourhhhhhh/iamabazawhourhhhhhh.github.io/main/plugins/"..FileName)
+local Get_Files, res = https.request("https://raw.githubusercontent.com/iamabazawhourhhhhhh/nothinghereiamsorry/main/plugins/"..FileName)
 if res == 200 then
 print("DONLOADING_FROM_URL: "..FileName)
 local FileD = io.open("plugins/"..FileName,'w+')
@@ -6123,9 +6123,9 @@ return sendMsg(msg.chat_id_,msg.id_,"واحشني")
 elseif Text== "مرحبا"  then return sendMsg(msg.chat_id_,msg.id_,"مراحب")
 elseif Text== "سلام" or Text== "السلام عليكم" or Text== "سلام عليكم" or Text=="سلامن عليكم" or Text=="السلامن عليكم" then 
 return sendMsg(msg.chat_id_,msg.id_,"وعليكم السلام ." )
-
-elseif Text== "بوب" or Text== "البوب"  then return sendMsg(msg.chat_id_,msg.id_,"[UFO](HTTPS://T.ME/UU_0b)")
-elseif Text== "باسل" or Text== "بيسو" or Text== "بسله" then return sendMsg(msg.chat_id_,msg.id_,"[مطور السورس://T.ME/xb_0b")
+elseif Text== "hell" or Text== "هيل"  then return sendMsg(msg.chat_id_,msg.id_,"[مطور السورس](https://t.me/r00t94)")
+elseif Text== "بوب" or Text== "البوب"  then return sendMsg(msg.chat_id_,msg.id_,"[bob](HTTPS://T.ME/UU_0b)")
+elseif Text== "باسل" or Text== "بيسو" or Text== "بسله" then return sendMsg(msg.chat_id_,msg.id_,"[مطور السورس:/](T.ME/xb_0b)")
 elseif Text== "ايديي" or Text=="ايدي 🆔" then 
 GetUserID(msg.sender_user_id_,function(arg,data)
 if data.username_ then USERNAME = '@'..data.username_ else USERNAME = FlterName(data) end
