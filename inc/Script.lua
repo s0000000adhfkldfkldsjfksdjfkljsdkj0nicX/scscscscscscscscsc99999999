@@ -3082,7 +3082,7 @@ sendMsg(msg.chat_id_,msg.id_,'✦¹  يوجد تحديث جديد الان \n✦
 redis:set(ws..":VERSION",GetVerison)
 return false
 else
-return "ঌ الاصدار الحالي : *v"..version.."* \n✦¹  لديـك احدث اصدار\n - @sourcehill"
+return "ঌ الاصدار الحالي : *v"..version.."* \n✦¹  لديـك احدث اصدار\n - [✦ قـناة السـورس](https://t.me/sourcehell)"
 end
 return false
 end
@@ -4695,7 +4695,7 @@ redis:hdel(ws..'replay_sticker:group:',msg.text)
 redis:hdel(ws..'replay_video:group:',msg.text)
 redis:hdel(ws..'replay_files:group:',msg.text)
 redis:setex(ws..'allreplay:'..msg.chat_id_..msg.sender_user_id_,300,msg.text)
-return sendMsg(msg.chat_id_,msg.id_," جيد , يمكنك الان ارسال جوا ب الردالعام \n [[ نص,صوره,فيديو,متحركه,بصمه,اغنيه,ملف ]] \n\n\n علما ان الاختصارات كالاتي : \n \n#name : لوضع اسم المستخدم\n#id : لوضع ايدي المستخدم\n#msgs : لوضع معرف المستخدم \n#stast : لوضع نوع رتبه المستخدم \n#game : لوضع تفاعل المستخدم \n#msgs : لاضهار عدد الرسائل \n#auto : لاضهار عدد النقاط \n#edit : لاضهار عدد السحكات \n#bot : لاضهار اسم البوت\n{المطور} : لاضهار معرف المطور الاساسي\n➼")
+return sendMsg(msg.chat_id_,msg.id_," جيد , يمكنك الان ارسال جوا ب الرد العام \n [[ نص,صوره,فيديو,متحركه,بصمه,اغنيه,ملف ]] \n\n\n علما ان الاختصارات كالاتي : \n \n#name : لوضع اسم المستخدم\n#id : لوضع ايدي المستخدم\n#msgs : لوضع معرف المستخدم \n#stast : لوضع نوع رتبه المستخدم \n#game : لوضع تفاعل المستخدم \n#msgs : لاضهار عدد الرسائل \n#auto : لاضهار عدد النقاط \n#edit : لاضهار عدد السحكات \n#bot : لاضهار اسم البوت\n{المطور} : لاضهار معرف المطور الاساسي\n➼")
 end
 end
 
@@ -6123,7 +6123,7 @@ return sendMsg(msg.chat_id_,msg.id_,"واحشني")
 elseif Text== "مرحبا"  then return sendMsg(msg.chat_id_,msg.id_,"مراحب")
 elseif Text== "سلام" or Text== "السلام عليكم" or Text== "سلام عليكم" or Text=="سلامن عليكم" or Text=="السلامن عليكم" then 
 return sendMsg(msg.chat_id_,msg.id_,"وعليكم السلام ." )
-elseif Text== "hell" or Text== "هيل"  then return sendMsg(msg.chat_id_,msg.id_,"[مطور السورس](https://t.me/r00t94)")
+elseif Text== "hell" or Text== "هيل" or Text== "مطور السورس" then return sendMsg(msg.chat_id_,msg.id_,"[مطور السورس](https://t.me/r00t94)")
 elseif Text== "بوب" or Text== "البوب"  then return sendMsg(msg.chat_id_,msg.id_,"[bob](HTTPS://T.ME/UU_0b)")
 elseif Text== "باسل" or Text== "بيسو" or Text== "بسله" then return sendMsg(msg.chat_id_,msg.id_,"[مطور السورس👑](T.ME/xb_0b)")
 elseif Text== "ايديي" or Text=="ايدي 🆔" then 
