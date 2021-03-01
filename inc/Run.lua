@@ -116,7 +116,7 @@ local TokenBot = io.open('./inc/Token.txt', "r")
 if not TokenBot then
 print('\27[0;33m>>'..[[
 ---------------------------------------------------------------------
-@xb_0b
+@SourceHell
 ---------------------------------------------------------------------
 ]]..'\027[0;32m')
 create_config()
@@ -509,12 +509,12 @@ Plug.dWs(msg)
 print("\27[1;35m¦Msg_IN_Process : \27[1;32"..name.."\27[0m")
 end
 else
-print("The File "..name.." Not Runing in The Source ws")
+print("The File "..name.." Not Runing in The Source HELL")
 end 
 
 end
 else
-print("The File Script.lua Not Runing in The Source ws")
+print("The File Script.lua Not Runing in The Source HELL")
 end
 end
 
@@ -677,7 +677,7 @@ end
 end
 end
 io.popen("rm -fr ../.telegram-cli/data/document/*")
-sendMsg(Uploaded_Groups_CH,Uploaded_Groups_MS,' تم رفع آلنسـخهہ‏‏ آلآحتيآطـيهہ\n حآليآ عدد مـجمـوعآتك هہ‏‏يهہ‏‏ *'..redis:scard(ws..'group:ids')..'* \n')
+sendMsg(Uploaded_Groups_CH,Uploaded_Groups_MS,' تم رفع نسختك يبشه\n دلوقتي عدد مجموعاتك‏‏ *'..redis:scard(ws..'group:ids')..'* \n - @r00t94 !!')
 end
 elseif data.ID == "UpdateUser" then  
 if data.user_.type_.ID == "UserTypeDeleted" then
