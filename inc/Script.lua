@@ -181,7 +181,7 @@ uuuu = arg.UserName:gsub("@","")
 sendMsg(arg.ChatID,arg.MsgID,"["..data.title_.."](t.me/"..uuuu..")")
 end,{ChatID=msg.chat_id_,MsgID=msg.id_,UserName=info.username})
 else
-message = message..' ['..info.username..'](T.ME/SourceHell)  \n'
+message = message..' ['..info.username..'](T.ME/sourcehill)  \n'
 sendMsg(msg.chat_id_,msg.id_,message)
 end
 
@@ -3082,7 +3082,7 @@ sendMsg(msg.chat_id_,msg.id_,'✦¹  يوجد تحديث جديد الان \n✦
 redis:set(ws..":VERSION",GetVerison)
 return false
 else
-return "ঌ الاصدار الحالي : *v"..version.."* \n✦¹  لديـك احدث اصدار\n - [✦ قـناة السـورس](https://t.me/sourcehell)"
+return "ঌ الاصدار الحالي : *v"..version.."* \n✦¹  لديـك احدث اصدار\n - [✦ قـناة السـورس](https://t.me/sourcehill)"
 end
 return false
 end
