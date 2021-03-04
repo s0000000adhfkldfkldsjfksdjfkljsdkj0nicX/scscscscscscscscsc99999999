@@ -181,7 +181,7 @@ uuuu = arg.UserName:gsub("@","")
 sendMsg(arg.ChatID,arg.MsgID,"["..data.title_.."](t.me/"..uuuu..")")
 end,{ChatID=msg.chat_id_,MsgID=msg.id_,UserName=info.username})
 else
-message = message..' ['..info.username..'](T.ME/SourceHell)  \n'
+message = message..' ['..info.username..'](T.ME/SourceHill)  \n'
 sendMsg(msg.chat_id_,msg.id_,message)
 end
 
@@ -1684,10 +1684,41 @@ redis:setex(ws..'about:witting'..msg.chat_id_..msg.sender_user_id_,300,true)
 return "✦¹  حسننا عزيزي  \n✦¹  الان ارسل الوصف  للمجموعه\n" 
 end
 
-if MsgText[1] == "تاك للكل" then 
-if not msg.Admin then return "هذا الامر ليس لك عزيزي .  \n" end
-if not redis:get(ws.."lock_takkl"..msg.chat_id_) then  return "✦¹  الامر معطل من قبل الادراة" end 
-return TagAll(msg) 
+if MsgText[1] == "تاك للكل" then
+if not msg.Admin then return " هذا الامر يخص {الادمن,المدير,المنشئ,المطور} فقط  \n" end
+if not redis:get(ws.."lock_takkl"..msg.chat_id_) then  return "الامر معطل من قبل الادراة يبشه." end 
+if redis:get(ws.."chat:tagall"..msg.chat_id_) then  return "يمكنك عمل تاك للكل كل 5 دقائق بس يبشه." end 
+redis:setex(ws..'chat:tagall'..msg.chat_id_,300,true)
+if MsgText[2] and MsgText[2]:match('^ل %d+$') then
+taglimit = MsgText[2]:match('^ل %d+$'):gsub('ل ','')
+
+else
+taglimit = 200
+end
+tdcli_function({ID = "GetChannelMembers",channel_id_ = msg.chat_id_:gsub('-100',''), offset_ = 0,limit_ = taglimit
+},function(ta,moody)
+x = 0
+list = moody.members_
+for k, v in pairs(list) do
+GetUserID(v.user_id_,function(arg,data)
+x = x + 1
+if x == 1 then
+t = " قائمة الاعضاء \n\n"
+end
+if data.username_ then
+t = t..""..x.."-l {[@"..data.username_.."]} \n"
+else
+tagname = FlterName(data.first_name_..' '..(data.last_name_ or ""),20)
+tagname = tagname:gsub("]","")
+tagname = tagname:gsub("[[]","")
+t = t..""..x.."-l {["..tagname.."](tg://user?id="..v.user_id_..")} \n"
+end
+if k == 0 then
+send_msg(msg.chat_id_,t,msg.id_)
+end
+end)
+end
+end,nil)
 end
 
 if MsgText[1] == "منع" then 
@@ -3082,7 +3113,7 @@ sendMsg(msg.chat_id_,msg.id_,'✦¹  يوجد تحديث جديد الان \n✦
 redis:set(ws..":VERSION",GetVerison)
 return false
 else
-return "ঌ الاصدار الحالي : *v"..version.."* \n✦¹  لديـك احدث اصدار\n - @sourcehill"
+return "ঌ الاصدار الحالي : *v"..version.."* \n✦¹  لديـك احدث اصدار\n - [Hill](t.me/sourcehill)"
 end
 return false
 end
@@ -3770,11 +3801,11 @@ end
 if MsgText[1] == "السورس" or MsgText[1]=="سورس" then
 return [[
 
-𓄰 [ 𝚂𝙾𝚄𝚁𝙲𝙴 𝙷𝙸𝙻𝙻 𓏙](t.me/sourcehill)
+𓄰 [𝚂𝙾𝚄𝚁𝙲𝙴 𝙷𝙸𝙻𝙻 𓏙](t.me/sourcehill)
 
-𓄰 [𝙳𝙴𝚅¹](t.me/xb_0b)
+𓄰 [𝙳𝙴𝚅](t.me/r00t94)
 
-𓄰 [𝙳𝙴𝚅²](t.me/UU_0b)
+𓄰 [𝙳𝙴𝚅](t.me/xb_0b)
 
 𓄰 [ 𝚃𝙰𝚆𝙰𝚂𝙾𝙻 💬 ](t.me/abazaxbot)
 
@@ -3956,7 +3987,7 @@ end
 
 text = [[✦¹  مـرحبآ آنآ بوت آسـمـي []]..redis:get(ws..':NameBot:')..[[] 
 ✦¹  يمكنني حمايه المجموعات من السبام والتوجيه الخ....
-✦¹  [قـناة الـسورس👑](T.ME/SourceHill) 
+✦¹ [قـناة الـسورس👑](T.ME/SourceHill) 
 ]]..SUDO_USERR..[[
 
 ✦¹ ]]
@@ -6122,7 +6153,7 @@ return sendMsg(msg.chat_id_,msg.id_,"واحشني")
 elseif Text== "مرحبا"  then return sendMsg(msg.chat_id_,msg.id_,"مراحب")
 elseif Text== "سلام" or Text== "السلام عليكم" or Text== "سلام عليكم" or Text=="سلامن عليكم" or Text=="السلامن عليكم" then 
 return sendMsg(msg.chat_id_,msg.id_,"وعليكم السلام ." )
-elseif Text== "hell" or Text== "هيل"  then return sendMsg(msg.chat_id_,msg.id_,"[مطور السورس](https://t.me/r00t94)")
+elseif Text== "hell" or Text== "هيل" or Text== "مطور السورس" then return sendMsg(msg.chat_id_,msg.id_,"[مطور السورس](https://t.me/r00t94)")
 elseif Text== "بوب" or Text== "البوب"  then return sendMsg(msg.chat_id_,msg.id_,"[bob](HTTPS://T.ME/UU_0b)")
 elseif Text== "باسل" or Text== "بيسو" or Text== "بسله" then return sendMsg(msg.chat_id_,msg.id_,"[مطور السورس👑](T.ME/xb_0b)")
 elseif Text== "ايديي" or Text=="ايدي 🆔" then 
